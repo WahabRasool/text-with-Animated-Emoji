@@ -1,0 +1,65 @@
+@charset "UTF-8";
+:checked ~ .full-page .text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.text {
+  display: block;
+  margin: auto;
+  font-size: 7vw;
+  line-height: 1;
+  font-family: monospace;
+  font-weight: bold;
+  background-image: url("data:image/svg+xml,<svg width='150px' height='150px' xmlns='http://www.w3.org/2000/svg'><text x='0' y='130px' font-size='130px' clip-path='url(%23emojiClipPath)'>👻</text></svg>");
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: bg 6s infinite alternate;
+}
+
+@keyframes bg {
+  0% {
+    background-position-x: -20%;
+  }
+  100% {
+    background-position-x: 115%;
+  }
+}
+html {
+  font-family: arial;
+  height: -webkit-fill-available;
+}
+
+.full-page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  min-height: -webkit-fill-available;
+  background-color: #444;
+}
+
+input {
+  position: fixed;
+  top: 18px;
+  left: 15px;
+  z-index: 11;
+  display: block;
+  padding: 5px;
+  border: solid 1px rgba(136, 136, 136, 0.7);
+  border-radius: 4px;
+  background-color: rgba(255, 221, 64, 0.8);
+  margin-right: 5px;
+}
+
+label {
+  position: fixed;
+  z-index: 10;
+  left: 10px;
+  top: 10px;
+  display: block;
+  padding: 10px;
+  padding-left: 30px;
+  border-radius: 4px;
+  background-color: rgba(255, 221, 64, 0.8);
+}
